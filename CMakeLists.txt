@@ -1,0 +1,15 @@
+cmake_minimum_required (VERSION 2.8.11)
+project (perlinfieldbot)
+
+add_library(fastnoise STATIC FastNoise.cpp FastNoise.h)
+add_executable(circle circle.cpp)
+add_executable(fractal fractal.cpp)
+add_executable(fujii fujii.cpp)
+add_executable(perlin perlin.cpp)
+add_executable(galaxies galaxies.cpp)
+
+target_link_libraries(circle sfml-window sfml-graphics sfml-system fastnoise)
+target_link_libraries(fractal sfml-window sfml-graphics sfml-system fastnoise)
+target_link_libraries(fujii sfml-window sfml-graphics sfml-system fastnoise)
+target_link_libraries(perlin sfml-window sfml-graphics sfml-system fastnoise)
+target_link_libraries(galaxies sfml-window sfml-graphics sfml-system fastnoise)
