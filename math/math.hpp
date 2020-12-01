@@ -1,6 +1,6 @@
 #include <math.h>
 #include <algorithm>
-#include "FastNoise.h"
+#include "../FastNoise.h"
 
 
 #pragma once
